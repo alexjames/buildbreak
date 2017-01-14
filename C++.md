@@ -1,5 +1,8 @@
+
+Source: Scott Myers: Effective C++
+
 ```
-Don't use #define for anything other than #ifndef/#define/#endif.
+Don't use #define for anything other than #ifndef-#define-#endif.
 
 Type-safety and extensibility is the cornerstone of C++.
 ```
@@ -19,3 +22,14 @@ You can also overload types (extensibility) to read/write class objects:
 cin >> class_obj;
 cout << class_obj;
 ```
+
+```
+#include<iostream.h> and #include<iostream> are different.
+With iostream.h, you get the same elements but at a global scope. This can lead to name conflicts.
+This is why you should only use iostream, which gives you the elements within namespace std.
+```
+
+```
+Don't use malloc or free. They are not constructor/destructor aware.
+```
+
