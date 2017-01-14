@@ -33,3 +33,26 @@ This is why you should only use iostream, which gives you the elements within na
 Don't use malloc or free. They are not constructor/destructor aware.
 ```
 
+```
+Never use "using namespace std;" to include everything in the std namespace to the global
+namespace. This can cause naming conflicts.
+
+Here are alternatives:
+Declare it in the function using it:
+
+void f()
+{
+  using namespace std;
+  cout << "lol" << endl;
+}
+
+OR only import the symbols you need into the global namespace.
+
+using std::cout;
+using std::endl;
+
+void f()
+{
+  cout << "lol" << endl;
+}
+```
