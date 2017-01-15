@@ -5,7 +5,42 @@
 * Helpers should be in the same namespace as the classes they support.
 
 
-Warning. This is not a beginners guide. This is mostly documentation of syntax and high-level concepts which you will encounter in C++.
+Warning. This is not a beginners guide. This is mostly documentation of syntax, high-level concepts and best-practices which you will encounter in C++.
+
+# Sample C++ program
+
+```
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	cout << "hurray" << endl;
+	return 0;
+}
+```
+This will compile and work without any issues. No problems here except for the `using namespace std` part.This will
+include everything in the std namespace to the global namespace. This can cause naming conflicts.
+
+Here are alternatives -
+Declare it in the function using it:
+```
+void f()
+{
+  using namespace std;
+  cout << "lol" << endl;
+}
+```
+OR only import the symbols you need into the global namespace.
+```
+using std::cout;
+using std::endl;
+
+void f()
+{
+  cout << "lol" << endl;
+}
+```
 
 Classes in C++ are user-defined types that consists of data members (variables) and member functions. Public members are visible to the outside word. Private members are invisible and only accessible inside the class. A class is a namespace that contains its members.
 
