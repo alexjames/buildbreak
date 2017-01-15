@@ -65,3 +65,12 @@ x.you_can_access_this = 4;           // works
 x.make_this_object_do_something();   // works
 x.you_cant_see_me = 6;               // FAILS! Accessing a private data memeber
 ```
+This is how you define member functions -
+
+```
+int X::make_this_object_do_something()
+{
+	you_cant_see_me = 6;         // okay to access private data memeber
+}
+```
+
