@@ -23,7 +23,7 @@ This will compile and work without any issues. No problems here except for the `
 include everything in the std namespace to the global namespace. This can cause naming conflicts.
 
 Here are alternatives -
-Declare it in the function using it:
+Declare it within the scope of a function:
 ```
 void f()
 {
@@ -60,5 +60,8 @@ class X
 This is how you create an object of type X.
 
 ```
-X 
+X x
+x.you_can_access_this = 4;           // works
+x.make_this_object_do_something();   // works
+x.you_cant_see_me = 6;               // FAILS! Accessing a private data memeber
 ```
