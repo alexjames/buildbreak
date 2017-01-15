@@ -5,6 +5,8 @@
 * Helpers should be in the same namespace as the classes they support.
 
 
+Warning. This is not a beginners guide. This is mostly documentation of syntax and high-level concepts which you will encounter in C++.
+
 Classes in C++ are user-defined types that consists of data members (variables) and member functions. Public members are visible to the outside word. Private members are invisible and only accessible inside the class. A class is a namespace that contains its members.
 
 ```
@@ -19,4 +21,9 @@ class X
     int you_can_access_this;
     int make_this_object_do_something();
 };
+```
+This is how you create an object of type X.
+
+```
+X 
 ```
