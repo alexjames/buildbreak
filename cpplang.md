@@ -3,3 +3,20 @@
 * Separate the interface from its implementation.
 * Add member functions only if they need direct access to member variables. Otherwise, separate them into helper functions.
 * Helpers should be in the same namespace as the classes they support.
+
+
+Classes in C++ are user-defined types that consists of data members (variables) and member functions. Public members are visible to the outside word. Private members are invisible and only accessible inside the class. A class is a namespace that contains its members.
+
+```
+class X
+{
+  private:
+    int you_cant_see_me;
+    char you_cant_see_me_either;
+    int do_class_related_stuff();
+    
+  public:
+    int you_can_access_this;
+    int make_this_object_do_something();
+};
+```
