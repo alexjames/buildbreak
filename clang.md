@@ -21,3 +21,17 @@ In GCC, #include <stdio.h> searches for stdio.h in the standard list of system d
 will first attempt to search for stdio in the same directory as the source file, before defaulting to the
 standard list.
 
+Program execution starts at the main function. Every executable program has to have this function.
+
+### printf format specifiers
+
+| Format        | Action        |
+| ------------- |:-------------:| 
+| %c     | character | 
+| %f     | float or double | 
+| %d     | integer | 
+| %p     | pointer | 
+| %u     | unsigned | 
+| %x     | hexadecimal | 
+| %6d     | print integer at least 6 charactesr wide | 
+| %6.2f     | print float 6 characters wide, 2 characters after decimal | 
