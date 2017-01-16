@@ -78,11 +78,12 @@ though we avoid starting them with "_" since library routines tend to use these.
 | double | 8 | 8 | 
 
 Examples of definitions:
-
+```
     int i = 6;
     char ch = 'd';
-    float f =  99.93f;    // suffix of f indicates a single-precision (float)
-    double d = 3.5;       // no suffix for doubles
+    float f =  99.93e-2f;    // 99.93 * 10 ^ -2, suffix of f indicates a single-precision (float)
+    double d = 3.5;          // no suffix for doubles
+```
 
 ### functions
 
