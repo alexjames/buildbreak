@@ -35,3 +35,34 @@ Program execution starts at the main function. Every executable program has to h
 | %x     | hexadecimal | 
 | %6d     | print integer at least 6 charactesr wide | 
 | %6.2f     | print float 6 characters wide, 2 characters after decimal | 
+
+### variables and scope
+
+declaration - specifies the name and type of an object
+definition - causes storage to be allocated to an object
+
+Local variables declared within a function are only visible within the scope of that
+function. These are known as automatic variables. These are variables put on the stack.
+
+The `extern` keyword specifies that a particular variable has been defined outside the current
+scope. It is common practice to place all definitions of external variables at the beginning
+of the source file. This way, the extern declarations can be omitted.
+
+```
+The following code snippet would fail to compile if you skip the extern declaration.
+int main()
+{
+    extern int a;
+    a = 5;
+    return 0;
+}
+
+int a;
+```
+
+
+### functions
+
+In C, all function arguments are passed by value - which means the function is given the values of its arguments
+in temporary variables rather than the originals.
+
