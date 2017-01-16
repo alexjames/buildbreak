@@ -39,6 +39,7 @@ Program execution starts at the main function. Every executable program has to h
 ### variables and scope
 
 declaration - specifies the name and type of an object
+
 definition - causes storage to be allocated to an object
 
 Local variables declared within a function are only visible within the scope of that
@@ -46,7 +47,8 @@ function. These are known as automatic variables. These are variables put on the
 
 The `extern` keyword specifies that a particular variable has been defined outside the current
 scope. It is common practice to place all definitions of external variables at the beginning
-of the source file. This way, the extern declarations can be omitted.
+of the source file. This way, the extern declarations can be omitted. Extern can only be used
+in declarations.
 
 ```
 The following code snippet would fail to compile if you skip the extern declaration.
@@ -60,6 +62,27 @@ int main()
 int a;
 ```
 
+Variable names can contain letters, numbers and "_". The variable name must begin with a letter or "_",
+though we avoid starting them with "_" since library routines tend to use these.
+
+
+| Declaration | 32-bit | 64-bit |
+| ----------- |:------:|:------:|  
+| char | 1 | 1 |  
+| short int | 2 | 2 |  
+| int | 4 | 4 |  
+| long int | 4 | 8 |  
+| long long int | 8 | 8 |  
+| char * | 4 | 8 |  
+| float | 4 | 4 |  
+| double | 8 | 8 | 
+
+Examples of definitions:
+
+    int i = 6;
+    char ch = 'd';
+    float f =  99.93f;    // suffix of f indicates a single-precision (float)
+    double d = 3.5;       // no suffix for doubles
 
 ### functions
 
