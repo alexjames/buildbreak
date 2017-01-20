@@ -6,6 +6,7 @@ They are mostly used for safe dynamic memory management.
 std::unique_ptr acts as a single unique pointer to a resource; this reference cannot be copied.
 
 unique_ptr <T> myPtr (new T);
+
 unique_ptr <T> otherPtr = myPtr; // compilation error
 
 The object is destroyed when the pointer goes out of scope.
