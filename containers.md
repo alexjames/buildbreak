@@ -43,5 +43,15 @@ if (it != ht.end())
   cout << it->first << it->second;
 ```
 
-
+# set
+```
+#include<set>
+std::set<int> s;
+s.insert(5);
+std::set<int>::iterator it = s.find(5);
+if (it != it.end())
+{
+  cout << *it;
+}
+```
 
