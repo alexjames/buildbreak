@@ -49,7 +49,7 @@ if (it != ht.end())
 std::set<int> s;
 s.insert(5);
 std::set<int>::iterator it = s.find(5);
-if (it != it.end())
+if (it != s.end())
 {
   cout << *it;
 }
