@@ -33,7 +33,7 @@ if (s.empty())
 {
 }
 ```
-# unordered map
+# unordered map - hast table
 ```
 #include<unordered_map>
 unordered_map<int, char> ht;
@@ -42,8 +42,10 @@ auto it = ht.find(5);
 if (it != ht.end())
   cout << it->first << it->second;
 ```
+std::map is an rb-tree.
 
-# set
+
+# set - RB tree
 ```
 #include<set>
 std::set<int> s;
